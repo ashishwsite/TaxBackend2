@@ -1,6 +1,6 @@
 const connectMongoose=require('./db')
 const express=require('express')
-const port=process.env.PORT ||5000;
+const port=process.env.PORT ||10000;
 var cors=require('cors')
 connectMongoose();
 //express se server bana raha hua aur uska name app de diya 
