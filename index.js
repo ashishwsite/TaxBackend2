@@ -1,6 +1,6 @@
 const connectMongoose=require('./db')
 const express=require('express')
-const port=5000
+const port=process.PORT||5000
 var cors=require('cors')
 connectMongoose();
 const app=express()
