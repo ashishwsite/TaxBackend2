@@ -9,7 +9,16 @@ app.use(cors())
 //server bana hai expeess ki help se 
 app.use(express.json())
 app.get('/',(req,res)=>{
-    res.send("hellow world")
+    res.send("hellow ,server is running fine ")
+})
+app.get('/about',(req,res)=>{
+    res.send("the response is for /about requst ")
+})
+app.get('/contact',(req,res)=>{
+    res.send("the respoonse for /contact requset ")
+})
+app.get('/home',(req,res)=>{
+    res.send("for /home request")
 })
 app.use('/',require('./Routes/Auth'))
 app.listen(port,()=>{
