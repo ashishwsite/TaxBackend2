@@ -1,5 +1,5 @@
 var  mongoose=require('mongoose')
-const mongooseUrl=require('./Private/data')
+const mongooseUrl='mongodb://localhost:27017/'
 var connectMongoose=()=>{
     mongoose.connect(mongooseUrl);
     

@@ -20,7 +20,7 @@ app.get('/contact',(req,res)=>{
 app.get('/home',(req,res)=>{
     res.send("for /home request")
 })
-app.use('/',require('./Routes/Auth'))
+app.use('/auth',require('./Routes/Auth'))
 app.listen(port,()=>{
     console.log(` backend  is listening at http://localhost:${port}`)
 })
