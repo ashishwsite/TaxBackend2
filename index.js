@@ -13,18 +13,18 @@ app.get("/", (req, res) => {
 app.use(express.static(path.resolve(__dirname, "frontend", "build")));
 res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
 });
-app.get('/',(req,res)=>{
-    res.send("hellow ,server is running fine ")
-})
-app.get('/about',(req,res)=>{
-    res.send("the response is for /about requst ")
-})
-app.get('/contact',(req,res)=>{
-    res.send("the respoonse for /contact requset ")
-})
-app.get('/home',(req,res)=>{
-    res.send("for /home request")
-})
+// app.get('/',(req,res)=>{
+//     res.send("hellow ,server is running fine ")
+// })
+// app.get('/about',(req,res)=>{
+//     res.send("the response is for /about requst ")
+// })
+// app.get('/contact',(req,res)=>{
+//     res.send("the respoonse for /contact requset ")
+// })
+// app.get('/home',(req,res)=>{
+//     res.send("for /home request")
+// })
 
 
 app.use('/auth',require('./Routes/Auth'))
