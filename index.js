@@ -1,6 +1,6 @@
 const connectMongoose=require('./db')
 const express=require('express')
-const port=process.env.PORT ||10000;
+const port=process.env.PORT ||5000;
 var cors=require('cors')
 connectMongoose();
 //express se server bana raha hua aur uska name app de diya 
@@ -13,5 +13,5 @@ app.get('/',(req,res)=>{
 })
 app.use('/',require('./Routes/Auth'))
 app.listen(port,()=>{
-    console.log(`${port}`)
+    console.log(` backend  is listening at http://localhost:${port}`)
 })
