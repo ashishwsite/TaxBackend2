@@ -1,6 +1,10 @@
 const  express=require('express')
 const User=require('../Modal/User')
 const router=express.Router();
+https://taxbackend2.onrender.com/
+router.get('/',async(req,res)=>{
+  return res.json({"name":"ramsashhish"})
+})
 router.post('/contact', async(req,res)=>{
     var bodyData=req.body
     console.log("req body data ",bodyData)
