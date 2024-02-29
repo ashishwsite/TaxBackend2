@@ -8,6 +8,11 @@ const app=express()
 app.use(cors())
 //server bana hai expeess ki help se 
 app.use(express.json())
+const path = require("path");
+app.get("/", (req, res) => {
+app.use(express.static(path.resolve(__dirname, "frontend", "build")));
+res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"));
+});
 app.get('/',(req,res)=>{
     res.send("hellow ,server is running fine ")
 })
@@ -20,6 +25,8 @@ app.get('/contact',(req,res)=>{
 app.get('/home',(req,res)=>{
     res.send("for /home request")
 })
+
+
 app.use('/auth',require('./Routes/Auth'))
 app.listen(port,()=>{
     console.log(` backend  is listening at http://localhost:${port}`)
